@@ -8,8 +8,21 @@ import os
 import json
 from discord.ext import commands
 
+# === SID ASCII Banner ===
+ascii_banner = r'''
+███████╗██╗██████╗ 
+██╔════╝██║██╔══██╗
+███████╗██║██║  ██║
+╚════██║██║██║  ██║
+███████║██║██████╔╝
+╚══════╝╚═╝╚═════╝ 
+
+        Made by sid_xd
+'''
+print(ascii_banner)
+
+# Continue with rest of the original script
 bot = commands.Bot(command_prefix="?", self_bot=True)
-script_dir = os.path.dirname(os.path.abspath(__file__))
 
 if sys.platform == 'win32':  # weird fix for a bug I ran into
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
