@@ -22,7 +22,8 @@ ascii_banner = r'''
 print(ascii_banner)
 
 # Continue with rest of the original script
-bot = commands.Bot(command_prefix="?", self_bot=True)
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix="?", self_bot=True, intents=intents)
 
 if sys.platform == 'win32':  # weird fix for a bug I ran into
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
